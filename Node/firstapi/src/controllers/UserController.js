@@ -22,8 +22,7 @@ module.exports = {
         const user = users.find((user) => user.id === Number(id))
 
         if(!user) {
-            response.send(400, { error: 'User not found' } )
-            
+           return response.send(400, { error: 'User not found' } )
         }
 
         response.send(200, user)
